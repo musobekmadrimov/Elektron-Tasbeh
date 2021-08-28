@@ -114,14 +114,12 @@ const next = () => {
 
 next();
 
-document.body.onkeydown = function(e) {
+document.body.onkeydown = e => {
     if (e.keyCode == 32) {
         increment();
-    }
-    if (e.keyCode == 13) {
+    } else if (e.keyCode == 13) {
         increment();
-    }
-    if (e.keyCode == 27) {
+    } else if (e.keyCode == 27) {
         reset();
     }
 }
